@@ -7,15 +7,18 @@
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
 
+  <remote  name="tipsy"
+           fetch="https://github.com/TipsyOs" />
+
   <default revision="8.1"
-           remote="gzosp"
+           remote="tipsy"
            sync-f="true"
            sync-c="true"
            sync-j="8" />
 
-  <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="gzosp" />
-  <project path="build/make" name="build" remote="gzosp" >
+  <!-- Tipsy -->
+  <project path="manifest" name="platform_manifest" remote="tipsy" />
+  <project path="build/make" name="tipsy_build" remote="tipsy" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -24,15 +27,31 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="gzosp" >
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="tipsy" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="tipsy" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
-  <project path="bionic" name="bionic" groups="pdk" remote="gzosp" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="tipsy" />
+  <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
+  <project path="frameworks/base" name="frameworks_base" remote="tipsy" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tipsy" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="tipsy" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="tipsy" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="tipsy" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tipsy" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="tipsy" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="system/core" name="system_core" groups="pdk" remote="tipsy" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="tipsy" />
+  <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
+
+  <!-- GZOSP -->
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
-  <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="device/gzosp/sepolicy" name="device_gzosp_sepolicy" remote="gzosp" />
   <project path="external/connectivity" name="external_connectivity" groups="pdk" remote="gzosp" />
   <project path="external/ebtables" name="external_ebtables" groups="pdk" remote="gzosp" />
@@ -50,18 +69,12 @@
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="gzosp" />
   <project path="external/toybox" name="external_toybox" groups="pdk" remote="gzosp" />
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="gzosp" />
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="gzosp" />
-  <project path="frameworks/base" name="frameworks_base" remote="gzosp" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="gzosp" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk" remote="gzosp" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="gzosp" />
   <project path="hardware/gzosp/interfaces" name="hardware_gzosp_interfaces" remote="gzosp" >
       <copyfile dest="hardware/gzosp/Android.bp" src="Android.bp"/>
   </project>
   <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="gzosp" />
   <project path="hardware/broadcom/wlan" name="hardware_broadcom_wlan" groups="pdk" remote="gzosp" />
-  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="gzosp" />
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="gzosp" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="gzosp" />
   <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" groups="pdk" remote="gzosp" />
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="gzosp" />
@@ -69,23 +82,17 @@
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="gzosp" />
-  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="gzosp" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="gzosp" />
   <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="gzosp" />
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="gzosp" />
-  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="system/bt" name="system_bt" groups="pdk" remote="gzosp" />
-  <project path="system/core" name="system_core" groups="pdk" remote="gzosp" />
   <project path="system/extras" name="system_extras" groups="pdk" remote="gzosp" />
   <project path="system/hardware/interfaces" name="system_hardware_interfaces" groups="pdk" remote="gzosp" />
   <project path="system/hwservicemanager" name="system_hwservicemanager" groups="pdk" remote="gzosp" />
@@ -93,9 +100,7 @@
   <project path="system/media" name="system_media" groups="pdk" remote="gzosp" />
   <project path="system/netd" name="system_netd" groups="pdk" remote="gzosp" />
   <project path="system/nfc" name="system_nfc" groups="pdk" remote="gzosp" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="gzosp" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
-  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
 
 </manifest>
