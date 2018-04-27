@@ -38,6 +38,7 @@
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
   <project path="frameworks/base" name="frameworks_base" remote="tipsy" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tipsy" />
+  <project path="frameworks/opt/color-picker" name="frameworks_opt_color-picker" remote="tipsy" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="tipsy" />
   <project path="frameworks/slim" name="frameworks_slim" remote="tipsy" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
