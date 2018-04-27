@@ -41,6 +41,7 @@
   <project path="frameworks/opt/color-picker" name="frameworks_opt_color-picker" remote="tipsy" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="tipsy" />
   <project path="frameworks/slim" name="frameworks_slim" remote="tipsy" />
+  <project path="frameworks/support" name="frameworks_support" remote="tipsy" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="tipsy" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="tipsy" />
