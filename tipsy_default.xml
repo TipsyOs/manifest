@@ -36,6 +36,7 @@
   <project path="bionic" name="android_bionic" groups="pdk" remote="tipsy" />
   <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
   <project path="device/gzosp/sepolicy" name="device_gzosp_sepolicy" remote="tipsy" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="tipsy" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
   <project path="frameworks/base" name="frameworks_base" remote="tipsy" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tipsy" />
