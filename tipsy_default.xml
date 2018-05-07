@@ -58,6 +58,7 @@
 
   <!-- GZOSP -->
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
+  <project path="external/chromium-webview" name="external_chromium-webview" groups="pdk" clone-depth="1" remote="gzosp" />
   <project path="external/connectivity" name="external_connectivity" groups="pdk" remote="gzosp" />
   <project path="external/ebtables" name="external_ebtables" groups="pdk" remote="gzosp" />
   <project path="external/exfat" name="external_exfat" remote="gzosp" />
