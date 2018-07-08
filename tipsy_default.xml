@@ -58,6 +58,7 @@
   <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
 
   <!-- GZOSP -->
+  <project path="art" name="art" groups="pdk" remote="gzosp" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
   <project path="external/chromium-webview" name="external_chromium-webview" groups="pdk" clone-depth="1" remote="gzosp" />
   <project path="external/connectivity" name="external_connectivity" groups="pdk" remote="gzosp" />
