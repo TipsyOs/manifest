@@ -7,15 +7,18 @@
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
 
+  <remote  name="tipsy"
+           fetch="https://github.com/TipsyOs" />
+
   <default revision="9.0"
-           remote="gzosp"
+           remote="tipsy"
            sync-f="true"
            sync-c="true"
            sync-j="8" />
 
-  <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="gzosp" />
-  <project path="build/make" name="build" remote="gzosp" >
+  <!-- TIPSY  -->
+  <project path="manifest" name="platform_manifest" remote="tipsy" />
+  <project path="build/make" name="tipsy_build" remote="tipsy" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -24,11 +27,23 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong"  remote="gzosp" >
+  <project path="build/soong" name="build_soong"  remote="tipsy" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <project path="bionic" name="android_bionic" remote="tipsy" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
+  <project path="frameworks/base" name="frameworks_base" remote="tipsy" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tipsy" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tipsy" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="system/core" name="system_core" groups="pdk" remote="tipsy" />
+  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="tipsy" />
+  <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
+
+  <!-- GZOSP  -->
   <project path="hardware/qcom/audio/default" name="hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="gzosp" />
   <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" groups="pdk-qcom" remote="gzosp" />
   <project path="hardware/qcom/camera" name="hardware_qcom_camera" groups="qcom_camera,pdk-qcom" remote="gzosp" />
@@ -39,7 +54,6 @@
 
   <project path="art" name="art" groups="pdk" remote="gzosp" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
-  <project path="bionic" name="bionic" remote="gzosp" />
   <project path="device/generic/goldfish" name="device_generic_goldfish" groups="pdk" remote="gzosp" />
   <project path="device/gzosp/sepolicy" name="device_gzosp_sepolicy" remote="gzosp" />
   <project path="external/exfat" name="external_exfat" remote="gzosp" />
@@ -49,13 +63,9 @@
   <project path="external/perfetto" name="external_perfetto" groups="pdk" remote="gzosp" />
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="gzosp" />
   <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="gzosp" />
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="gzosp" />
-  <project path="frameworks/base" name="frameworks_base" remote="gzosp" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="gzosp" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk" remote="gzosp" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="gzosp" />
   <project path="hardware/broadcom/wlan" name="hardware_broadcom_wlan" groups="pdk,broadcom_wlan" remote="gzosp" />
-  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="gzosp" />
   <project path="hardware/gzosp/interfaces" name="hardware_gzosp_interfaces" remote="gzosp" />
   <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="gzosp" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="gzosp" />
@@ -66,19 +76,14 @@
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="gzosp" />
   <project path="packages/apps/CarrierConfig" name="packages_apps_CarrierConfig" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="gzosp" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="gzosp" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="gzosp" />
   <project path="packages/services/BuiltInPrintService" name="packages_services_BuiltInPrintService" remote="gzosp" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" groups="pdk" remote="gzosp" />
   <project path="system/bt" name="system_bt" remote="gzosp" />
-  <project path="system/core" name="system_core" groups="pdk" remote="gzosp" />
   <project path="system/netd" name="system_netd" groups="pdk" remote="gzosp" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="gzosp" />
   <project path="system/tools/dtbtool" name="system_tools_dtbtool" remote="gzosp" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
-  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
 
 </manifest>
