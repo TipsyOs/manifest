@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="tipsy"
+           fetch="git://github.com/TipsyOs"
+           revision="10.0"
+           sync-c="true"
+           sync-j="8" />
+
+
+
+</manifest>
