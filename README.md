@@ -1,20 +1,20 @@
-# CarbonROM Source
+# TipsyOS Source
 
-Thanks for choosing CarbonROM!
+Thanks for choosing TipsyOS!
 
 ## Getting Started
 
-To get started with the CarbonROM sources, you'll should be familiar with [Git and Repo](http://source.android.com/source/version-control.html).
+To get started with the TipsyOS sources, you'll should be familiar with [Git and Repo](http://source.android.com/source/version-control.html).
 
 ## Create the Directories
 
-You will need to set up some directories in your build environment. One is your local binaries folder (to install repotool) and the other is for your CarbonROM source.
+You will need to set up some directories in your build environment. One is your local binaries folder (to install repotool) and the other is for your TipsyOS source.
 
 To create them run:
 
 ```sh
 mkdir -p ~/bin
-mkdir -p ~/carbon
+mkdir -p ~/tipsy
 ```
 
 ## Install dependencies
@@ -46,15 +46,15 @@ source ~/.bashrc
 
 ## Initialising the repository
 
-Move to the CarbonROM working directory and initialise the repo using the manifest located here, then sync the repos. You may get a prompt about using color. Just choose yes or no and hit enter.
+Move to the TipsyOS working directory and initialise the repo using the manifest located here, then sync the repos. You may get a prompt about using color. Just choose yes or no and hit enter.
 
 ```sh
-cd ~/carbon
-repo init -u https://github.com/CarbonROM/android.git -b cr-8.0
+cd ~/tipsy
+repo init -u https://github.com/TipsyOS/android.git -b 10.0
 repo sync -j8
 ```
 
-Yes, the branch is `cr-8.0`. That's CarbonROM 8, which runs on Android 10. Not Oreo. 10. Ten. T-E-N. TEN.
+Yes, the branch is `10.0`. That's TipsyOS 8, which runs on Android 10.
 
 ### Troubleshooting
 
@@ -86,79 +86,9 @@ Enter the number of the build you want to start and press Enter.
 After, run the make command. The top one will build at a speed that is most suitable for your device. You can manually set a number of threads to build with by replacing `12` in the bottom command with the number of threads to use.
 
 ```sh
-make carbon -j$(nproc --all)
+make tipsy -j$(nproc --all)
 # or
-make carbon -j12
+make tipsy -j12
 ```
 
-### Submitting Patches
-
-Patches are always welcome!  Please submit your patches via CarbonROM Gerrit!
-You can do this by using these commands:
-
-### Set up
-
-You need to set up your details. You only need to do this once.
-
-```sh
-git config --global review.review.carbonrom.org.username <Your username registered at CarbonROM gerrit>
-git config --global review.review.carbonrom.org.email <Your email registered at CarbonROM gerrit>
-```
-
-### Creating and uploading patch
-
-```sh
-cd ~/carbon
-. build/envsetup.sh
-repo start cr-8.0 .
-# make your changes and commit
-repo upload .
-```
-
-### GPG signing
-
-We will only allow GPG signed commits on our Gerrit/GitHub orgs, as well as require a signed push.
-
-You can set up signed commits by setting up the key accoridng to these directions on the [Git-SCM Site](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) and adding them to [Gerrit](http://review.carbonrom.org/#/settings/gpg-keys)
-
-You can enable the signed push with:
-
-```sh
-git config --global push.gpgSign if-asked
-```
-
-
-...and enable signing your commits with:
-
-```sh
-git config --global commit.gpgsign true
-```
-
-Note: "." meaning current directory
-For more help on using this tool, use this command: `repo help upload`
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in **one single commit**. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [CarbonROM Code Review](http://review.carbonrom.org/)
-
-If you have any issues/questions please contact us in channel:
- #carbonrom       //General-related questions
- #carbonrom-dev   //Development-related questions
-
- server: irc.freenode.net
-
-## Attention Themers
-
-You can find all CarbonROM Resources that need to be themed [here](https://github.com/CarbonROM/ThemeResources)
-Let us know when there is anything else we can help with, we will gladly do.
-
-## Translating CarbonROM
-
-We use crowdin for our ROMs translation. If you want to help with that, you can do so here.
-https://crowdin.com/project/carbonrom
-
-The available projects to translate will be updated when new things come into Carbon, so be sure to keep on checking the page.
-
-Many thanks to those who have helped translate the ROM!
-
+    make tipsy -j8 (or as many threads your hardware can handle)
