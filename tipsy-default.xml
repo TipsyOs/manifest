@@ -7,6 +7,10 @@
            sync-c="true"
            sync-j="8" />
 
-
+  <!-- Tipsy repos -->
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="packages/apps/CarbonFibers" name="packages_apps_CarbonFibers" remote="tipsy" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tipsy" />
+  <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
 
 </manifest>
