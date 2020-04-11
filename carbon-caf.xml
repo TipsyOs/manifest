@@ -81,7 +81,6 @@
   <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="LineageOS/android_vendor_nxp_opensource_hidlimpl" revision="lineage-17.1-sn100x" remote="lineage" />
   <project path="vendor/qcom/opensource/audio" name="CarbonROM/android_vendor_qcom_opensource_audio" remote="carbon" groups="qcom,pdk-qcom" />
   <project path="vendor/qcom/opensource/cryptfs_hw" name="CarbonROM/android_vendor_qcom_opensource_cryptfs_hw" remote="carbon" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="CarbonROM/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="carbon" groups="qcom,pdk-qcom" />
   <project path="vendor/qcom/opensource/dataservices" name="CarbonROM/android_vendor_qcom_opensource_dataservices" remote="carbon" groups="qcom,pdk-qcom" />
   <project path="vendor/qcom/opensource/interfaces" name="CarbonROM/android_vendor_qcom_opensource_interfaces" remote="carbon" groups="qcom,pdk-qcom" />
   <project path="vendor/qcom/opensource/power" name="LineageOS/android_vendor_qcom_opensource_power" remote="lineage" groups="qcom,pdk-qcom" />
