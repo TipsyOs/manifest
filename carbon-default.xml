@@ -35,6 +35,7 @@
 
   <project path="device/carbon/sepolicy" name="CarbonROM/android_device_carbon_sepolicy" remote="carbon" />
 
+  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" groups="pdk-fs" remote="lineage" />
   <project path="packages/apps/Snap" name="CarbonROM/android_packages_apps_Snap" remote="carbon" />
   <!-- <project path="packages/apps/Quarks" name="CarbonROM/android_packages_apps_Quarks" remote="carbon" /> -->
 
