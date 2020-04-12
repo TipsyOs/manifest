@@ -37,7 +37,7 @@
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="tipsy" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
   <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="tipsy" />
-  <project path="packages/apps/CarbonFibers" name="packages_apps_CarbonFibers" remote="tipsy" />
+  <project path="packages/apps/MartysPlace" name="packages_apps_MartysPlace" remote="tipsy" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tipsy" />
   <project path="system/core" name="android_system_core" groups="pdk" remote="tipsy" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="tipsy" />
