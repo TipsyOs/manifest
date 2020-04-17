@@ -38,6 +38,7 @@
   <project path="system/core" name="android_system_core" groups="pdk" remote="tipsy" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="tipsy" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="tipsy" groups="qcom,pdk-qcom" />
+  <project path="vendor/themes" name="vendor_themes" remote="tipsy" />
   <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
 
 </manifest>
