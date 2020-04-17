@@ -37,8 +37,6 @@
   <!-- <project path="packages/apps/Quarks" name="CarbonROM/android_packages_apps_Quarks" remote="carbon" /> -->
   <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" groups="pdk-fs" remote="lineage" />
 
-  <project path="vendor/themes" name="CarbonROM/android_vendor_themes" remote="carbon" />
-
   <!-- LineageOS Projects -->
   <project path="external/exfat" name="LineageOS/android_external_exfat" remote="lineage" />
   <project path="external/libnfc-nxp" name="LineageOS/android_external_libnfc-nxp" remote="lineage" />
