@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="tipsy"
-           fetch="git://github.com/TipsyOs"
+           fetch="https://github.com/TipsyOs"
            revision="10.0"
            sync-c="true"
            sync-j="8" />
