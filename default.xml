@@ -786,4 +786,7 @@
   <!-- CarbonROM -->
   <include name="carbon-default.xml" />
 
+  <!-- Tipsy -->
+  <include name="tipsy-default.xml" />
+
 </manifest>
