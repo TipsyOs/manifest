@@ -29,6 +29,7 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="tipsy" />
+  <project path="device/tipsy/sepolicy" name="device_tipsy_sepolicy" remote="tipsy" />
   <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="tipsy" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="gzstg" />
