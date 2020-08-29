@@ -39,6 +39,7 @@
   <project path="packages/apps/CarbonFibers" name="packages_apps_CarbonFibers" remote="tipsy" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tipsy" />
   <project path="system/core" name="android_system_core" groups="pdk" remote="tipsy" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="tipsy" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="tipsy" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="tipsy" groups="qcom,pdk-qcom" />
   <project path="vendor/tipsy" name="vendor_tipsy" remote="tipsy" />
