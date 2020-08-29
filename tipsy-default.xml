@@ -7,6 +7,12 @@
            sync-c="true"
            sync-j="8" />
 
+  <remote  name="gzstg"
+           fetch="https://github.com/GZOSP-Staging"
+           revision="tip10"
+           sync-c="true"
+           sync-j="8" />
+
   <!-- Tipsy repos -->
   <project path="bionic" name="android_bionic" groups="pdk" remote="tipsy" />
   <project path="build/make" name="tipsy_build" groups="pdk" remote="tipsy">
@@ -25,7 +31,7 @@
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="tipsy" />
   <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="tipsy" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tipsy" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="tipsy" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="gzstg" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tipsy" />
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="tipsy" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="tipsy" />
