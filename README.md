@@ -50,7 +50,7 @@ Move to the TipsyOS working directory and initialise the repo using the manifest
 
 ```sh
 cd ~/tipsy
-repo init -u https://github.com/TipsyOS/android.git -b tip10
+repo init -u https://github.com/TipsyOS/manifest.git -b tip10
 repo sync -j8
 ```
 
