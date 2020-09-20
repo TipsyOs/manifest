@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
 
   <remote  name="tipsy"
            fetch="https://github.com/TipsyOs"
