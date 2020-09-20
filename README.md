@@ -50,11 +50,11 @@ Move to the TipsyOS working directory and initialise the repo using the manifest
 
 ```sh
 cd ~/tipsy
-repo init -u https://github.com/TipsyOS/android.git -b 10.0
+repo init -u https://github.com/TipsyOS/android.git -b tip10
 repo sync -j8
 ```
 
-Yes, the branch is `10.0`. That's TipsyOS 8, which runs on Android 10.
+Yes, the branch is `10.0`. That's TipsyOS 10, which runs on Android 10.
 
 ### Troubleshooting
 
