@@ -3,7 +3,7 @@
 
   <include name="aosp.xml" />
   <include name="removals.xml" />
-  <include name="gzosp.xml" />
+  <include name="tipsy.xml" />
 
   <!-- CAF manifest -->
   <include name="caf_default.xml" />
