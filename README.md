@@ -1,13 +1,16 @@
-GZOSP
+Tipsy
 ========
 
 To initialize your local repository, use this command:
 
-	repo init -u https://github.com/GZOSP/manifest.git -b 11.0
+	repo init -u https://github.com/TipsyOs/manifest.git -b t11
+
+Dedicated to Marty
+------------------
+In Memory of our fallen brother Marty
 
 Submitting Patches
 ------------------
-
 We're open source, and patches are always welcome!
 To do this, you will need an account setup with our gerrit server and a changeid hooks.
 To add the changeid hook in a project, use the following commands:
